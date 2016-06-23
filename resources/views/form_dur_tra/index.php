@@ -47,6 +47,7 @@
 		<script type="text/javascript" src="{{ URL::asset('js/jquery.min.js') }}"></script>
 		<script type="text/javascript" src="{{ URL::asset('bootstrap/js/bootstrap.min.js') }}"></script>
 
+		<br>
 		<div class="container">
 			<!--
 			<div class="content">

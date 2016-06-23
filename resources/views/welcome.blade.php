@@ -42,6 +42,17 @@
 		{!! Html::script('js/jquery.min.js') !!}
 		{!! Html::script('bootstrap/js/bootstrap.min.js') !!}
 		<div class="container">
+			<br>
+			<div class="content">
+				<div class="col-md-12">					
+					<input type="button" name="btnUser" value="ข้อมูลผู้ใช้" onclick="location.href='{{action("UserController@summarize")}}'" />
+					<input type="button" name="btnFormSum" value="ข้อมูลแบบสอบถาม" onclick="location.href='{{action("LinkController@form_dur_tra_sum")}}'" />
+					<input type="button" name="btnForm" value="แบบสอบถามระหว่างอบรม" onclick="location.href='{{action("LinkController@form_dur_tra_index")}}'" />
+				</div>
+			</div>
+			<br>
+			<hr>			
+			<br>
 			<!--
 			<div class="content">
 				<div class="title">Laravel 5</div>

@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use DB;
 use App\Http\Controllers\Controller;
 
@@ -12,42 +10,12 @@ class FormController extends Controller
         return view('form_dur_tra.index');
     }
 	public function summarize()
-    {
-        //$users = DB::select('select * from users where active = ?', [1]);
+    {        
         $eva_dur_tras = DB::select('select * from eva_dur_tra');
-
         return view('form_dur_tra.summarize', ['eva_dur_tras' => $eva_dur_tras]);
     }
     public function insert()
-    {
-        /*
-        DB::insert('insert into users (id, name, email, password) values (?, ?, ?, ?)', [1, 'Dayle', 'test.w@test.com', '1234']);        
-        DB::transaction(function () {
-            DB::table('users')->update(['votes' => 1]);
-            DB::table('posts')->delete();
-        });
-        */
-        /*
-			$table->string('course_code', 10);
-			$table->string('course_name', 200);
-			$table->strimg('time_period');
-            $table->string('time_unit_code',2);
-            $table->string('time_unit_name',200);
-
-			$table->date('evaluation_date')
-			$table->string('duration_code', 2);
-			$table->string('duration_name', 200);
-
-			$table->string('question_type_code', 2);
-			$table->string('question_type_name', 200);
-			$table->string('question_code', 10);
-			$table->string('question_name', 200);
-
-			$table->string('answer_code', 10);
-			$table->string('answer_name', 200);
-			$table->string('answer_text', 200);
-
-		*/
+    {        
         DB::insert('insert into eva_dur_tra (
             course_code, course_name, time_period, time_unit_code, time_unit_name
             , evaluation_date, duration_code, duration_name
@@ -63,4 +31,61 @@ class FormController extends Controller
 
         return view('form_dur_tra.insert', ['is_completed' => '1']);
     }
+    public function update($id, $cousecode)
+    {
+        $affected = DB::update('update eva_dur_tra set course_code = ? where id = ?', [$cousecode, $id]);
+        $isComplete = '0';
+        if ($affected > 0) {
+            $isComplete = '1';
+        }
+
+        return view('form_dur_tra.update', ['is_completed' => $isComplete, 'num_rows' => $affected, 'id' => $id]);
+    }
+    public function deleteAll()
+    {
+        $deleted = DB::delete('delete from eva_dur_tra');
+        $isComplete = '0';
+        if ($deleted > 0) {
+            $isComplete = '1';
+        }
+
+        return view('form_dur_tra.delete_all', ['is_completed' => $isComplete, 'num_rows' => $deleted]);
+    }   
+    public function delete($id)
+    {
+        $deleted = DB::delete('delete from eva_dur_tra where id = ?', [$id]);
+        $isComplete = '0';
+        if ($deleted > 0) {
+            $isComplete = '1';
+        }
+        return view('form_dur_tra.delete', ['is_completed' => $isComplete, 'num_rows' => $deleted, 'id' => $id]);
+    }
+
+    /*
+    public function doSomething($squirrel)
+    {
+        $data['squirrel'] = $squirrel;
+        return View::make('simple', $data);
+    }
+    */
+
+    //$results = DB::select('select * from users where id = :id', ['id' => 1]);
+
+    // # Running An Insert Statement
+    //DB::insert('insert into users (id, name) values (?, ?)', [1, 'Dayle']);
+    // # Running An Update Statement
+    //$affected = DB::update('update users set votes = 100 where name = ?', ['John']);
+    // # Running A Delete Statement
+    //$deleted = DB::delete('delete from users');
+
+    // # Running A General Statement
+    //DB::statement('drop table users');
+
+    // # Database Transactions
+    /*
+    DB::transaction(function () {
+            DB::table('users')->update(['votes' => 1]);
+            DB::table('posts')->delete();
+    });
+    */
 }

@@ -1,7 +1,7 @@
 <br>
 <?php
 if ($is_completed == '1') {
-	echo "is_completed = " . $is_completed . ", Insert Completed.";
+	echo "is_completed = " . $is_completed . ", {$num_rows} rows update completed, ID: {$id} is updated.";
 }
 else
 {
