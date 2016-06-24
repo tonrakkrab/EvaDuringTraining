@@ -25,7 +25,8 @@ Route::get('usersummarize', 'UserController@summarize');
 Route::get('userinsert', 'UserController@insert');
 
 Route::get('form', 'FormController@index');
-Route::get('formsummarize', 'FormController@summarize');
+Route::get('formselectall', 'FormController@selectAll');
+Route::get('formconclude', 'FormController@conclude');
 Route::get('forminsert', 'FormController@insert');
 Route::get('formupdate/{id}/{cousecode}', ['uses' =>'FormController@update']);
 Route::get('formdeleteall', 'FormController@deleteAll');

@@ -9,13 +9,56 @@ class FormController extends Controller
     {
         return view('form_dur_tra.index');
     }
-	public function summarize()
+	public function selectAll()
     {        
         $eva_dur_tras = DB::select('select * from eva_dur_tra');
-        return view('form_dur_tra.summarize', ['eva_dur_tras' => $eva_dur_tras]);
+        return view('form_dur_tra.select_all', ['eva_dur_tras' => $eva_dur_tras]);
+    }
+    public function conclude()
+    {        
+        //$eva_dur_tras = DB::select('select * from eva_dur_tra where couse_code = ? and evaluation_date = ? and duration_code = ?', [$cousecode, $evaluationdate, $durationcode]);
+        $eva_dur_tras = DB::select('select * from eva_dur_tra ');
+
+        return view('form_dur_tra.conclude', ['eva_dur_tras' => $eva_dur_tras]);
+    }
+    public function insertTest()
+    {        
+        DB::insert('insert into eva_dur_tra (
+            course_code, course_name, time_period, time_unit_code, time_unit_name
+            , evaluation_date, duration_code, duration_name
+            , question_type_code, question_type_name, question_code, question_name
+            , answer_code, answer_name, answer_text
+            ) 
+            values (
+            "JOOM001", "การปรับเวอร์ชัน Joomla เป็น เวอร์ชั่นปัจจุบัน", 18, "TU001","ชั่วโมง" 
+            , date("now"), "DUR001", "(บ่าย)"
+            , "SEL", "Choice", "Q001" ,"ท่านเข้าใจเนื้อหาบทเรียนประมาณ"
+            , "A001", "ไม่ค่อยเข้าใจ", ""
+            )');
+
+        return view('form_dur_tra.insert', ['is_completed' => '1']);
     }
     public function insert()
-    {        
+    {
+        $course_code = 
+        $course_name = 
+        $time_period = 
+        $time_unit_code = 
+        $time_unit_name = 
+
+        $evaluation_date = 
+        $duration_code = 
+        $duration_name = 
+
+        $question_type_code = 
+        $question_type_name = 
+        $question_code = 
+        $question_name = 
+        
+        $answer_code = 
+        $answer_name = 
+        $answer_text = 
+
         DB::insert('insert into eva_dur_tra (
             course_code, course_name, time_period, time_unit_code, time_unit_name
             , evaluation_date, duration_code, duration_name
