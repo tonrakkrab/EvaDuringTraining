@@ -1,13 +1,13 @@
 <br>
 <?php
-/*if (is_null($eva_dur_tras)) {
+if (is_null($eva_dur_tras)) {
 	echo "eva_dur_tra in null.";
 }
 else
 {
 	echo "eva_dur_tra is not null.<br/>";
-}*/
-if (is_null($ids)) {}
+}
+/*if (is_null($ids)) {}
 else
 {
     echo "ids array first" . $ids[0];
@@ -15,6 +15,7 @@ else
     echo "ids array third" . $ids[2];
 }
 echo "<hr>";
+*/
 //$table->date('evaluation_date')
 /*
 <?php
@@ -44,7 +45,7 @@ echo $cars[2][0].": In stock: ".$cars[2][1].", sold: ".$cars[2][2].".<br>";
 echo $cars[3][0].": In stock: ".$cars[3][1].", sold: ".$cars[3][2].".<br>";
 ?>
 */
-/* // OK array 2 dimension
+// OK array 2 dimension
 $q = array (    
     'num_q' => 5,
     'a1' => array(0, 0, 2, 1, 3),
@@ -55,7 +56,7 @@ $q = array (
 echo "Number Qeustion: {$q['num_q']}";
 //echo "<br>Q1-A1: {$q[0][1]}<br><br>"; //ok
 echo "<br>Q1-A1: {$q['a1'][3]}<br><br>"; //ok
-*/
+
 
 // OK array 3 dimension
 $q = array (

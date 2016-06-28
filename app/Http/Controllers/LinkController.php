@@ -14,7 +14,7 @@ class LinkController extends Controller
 	public function form_dur_tra_sum()
     {
     	$eva_dur_tras = DB::select('select * from eva_dur_tra');
-        return view('form_dur_tra.summarize', ['eva_dur_tras' => $eva_dur_tras]);
+        return view('form_dur_tra.select_all', ['eva_dur_tras' => $eva_dur_tras]);
     }
 	public function form_dur_tra_index()
     {    	

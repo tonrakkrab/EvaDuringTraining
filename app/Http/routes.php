@@ -34,3 +34,5 @@ Route::get('formdelete/{id}', ['uses' =>'FormController@delete']);
 
 Route::get('pagedur_tra_sum', 'LinkController@form_dur_tra_sum');
 Route::get('pagedur_tra_index', 'LinkController@form_dur_tra_index');
+
+Route::post('form/dur_train','FormController@store');

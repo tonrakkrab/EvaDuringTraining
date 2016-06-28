@@ -3,8 +3,24 @@ namespace App\Http\Controllers;
 use DB;
 use App\Http\Controllers\Controller;
 
+use Carbon\Carbon;
+use App\Http\Requests;
+
+use Illuminate\Support\Facades\Redirect;
+use Session;
+
+use App\Http\Requests\Request;
+use App;
+use App\eva_dur_tra;
+use App\Http\Requests\DuringTrainingRequest;
+
 class FormController extends Controller 
 {
+    public function __construct()
+    {
+        //$this->middleware('admin');
+    }
+
 	public function index()
     {
         return view('form_dur_tra.index');
@@ -38,8 +54,10 @@ class FormController extends Controller
 
         return view('form_dur_tra.insert', ['is_completed' => '1']);
     }
+    
     public function insert()
     {
+        /*
         $course_code = 
         $course_name = 
         $time_period = 
@@ -58,7 +76,7 @@ class FormController extends Controller
         $answer_code = 
         $answer_name = 
         $answer_text = 
-
+*/
         DB::insert('insert into eva_dur_tra (
             course_code, course_name, time_period, time_unit_code, time_unit_name
             , evaluation_date, duration_code, duration_name
@@ -131,4 +149,53 @@ class FormController extends Controller
             DB::table('posts')->delete();
     });
     */
+
+    //public function store(DuringTrainingRequest $request)
+    public function store()
+    {       
+        /*             
+        $dur_train = new eva_dur_tra;        
+
+        $dur_train->course_code = 'x';
+        $dur_train->course_name = 'x';
+        $dur_train->time_period = 'x';
+        $dur_train->time_unit_code = 'x';
+        $dur_train->time_unit_name = 'x';
+
+        $dur_train->evaluation_date = new Carbon()
+        $dur_train->duration_code = 'x';
+        $dur_train->duration_name = 'x';
+
+        $dur_train->question_type_code = 'x';
+        $dur_train->question_type_name = 'x';
+        $dur_train->question_code = 'x';
+        $dur_train->question_name = 'x';
+        
+        $dur_train->answer_code = 'x';
+        $dur_train->answer_name =  'x';
+        $dur_train->answer_text = $request->input('g4_txt');
+
+        //$schedule->save();
+*/
+/*
+        DB::insert('insert into eva_dur_tra (
+            course_code, course_name, time_period, time_unit_code, time_unit_name
+            , evaluation_date, duration_code, duration_name
+            , question_type_code, question_type_name, question_code, question_name
+            , answer_code, answer_name, answer_text
+            ) 
+            values (
+            "JOOM001", "การปรับเวอร์ชัน Joomla เป็น เวอร์ชั่นปัจจุบัน", 18, "TU001","ชั่วโมง" 
+            , date("now"), "DUR001", "(บ่าย)"
+            , "SEL", "Choice", "Q001" ,"ท่านเข้าใจเนื้อหาบทเรียนประมาณ"
+            , "A001", "ไม่ค่อยเข้าใจ", ""
+            )');
+
+        return view('form_dur_tra.insert', ['is_completed' => '1']);
+ */    
+
+        //return view('form_dur_tra.index', ['ans_text' => $dur_train->answer_text]);
+        //return view('form_dur_tra.index', ['ans_text' => '9']);
+        return view('form_dur_tra.index', ['ans_text' => $_POST['g4_txt']]);
+    }    
 }

@@ -1,3 +1,14 @@
+<?php
+if (isset($ans_text)) {
+	if (is_null($ans_text)) {
+		echo "Ans Text is Null";
+	}
+	else
+	{
+		echo "Not Null. ans_text = " . $ans_text;
+	}
+}
+?>
 <html>
 	<head>
 		<title>Laravel</title>
