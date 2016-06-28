@@ -61,11 +61,11 @@
 						<div class="col-md-4"></div>
 						<div class="col-md-8">
 							<h5>
-							<div class="col-md-12 text-left"><input checked="checked" name="g1" id="g11" type="radio" value="1">&nbsp;ไม่เข้าใจเลย</div>
-		    				<div class="col-md-12 text-left"><input checked="checked" name="g1" id="g12" type="radio" value="2">&nbsp;ไม่ค่อยเข้าใจ</div>
-		    				<div class="col-md-12 text-left"><input checked="checked" name="g1" id="g13" type="radio" value="3">&nbsp;พอเข้าใจ</div>
-		    				<div class="col-md-12 text-left"><input checked="checked" name="g1" id="g14" type="radio" value="4">&nbsp;เข้าใจ</div>
-		    				<div class="col-md-12 text-left"><input checked="checked" name="g1" id="g15" type="radio" value="5">&nbsp;เข้าใจดี</div>
+							<div class="col-md-12 text-left"><input checked="checked" name="g1" id="g11" type="radio" value="11">&nbsp;ไม่เข้าใจเลย</div>
+		    				<div class="col-md-12 text-left"><input checked="checked" name="g1" id="g12" type="radio" value="12">&nbsp;ไม่ค่อยเข้าใจ</div>
+		    				<div class="col-md-12 text-left"><input checked="checked" name="g1" id="g13" type="radio" value="13">&nbsp;พอเข้าใจ</div>
+		    				<div class="col-md-12 text-left"><input checked="checked" name="g1" id="g14" type="radio" value="14">&nbsp;เข้าใจ</div>
+		    				<div class="col-md-12 text-left"><input checked="checked" name="g1" id="g15" type="radio" value="15">&nbsp;เข้าใจดี</div>
 		    				</h5>
 						</div>
 					</div>					
@@ -74,11 +74,11 @@
 						<div class="col-md-4"></div>
 						<div class="col-md-8">
 							<h5>
-							<div class="col-md-12 text-left"><input checked="checked" name="g2" id="g21" type="radio" value="1">&nbsp;ช้ามาก</div>
-		    				<div class="col-md-12 text-left"><input checked="checked" name="g2" id="g22" type="radio" value="2">&nbsp;ช้า</div>
-		    				<div class="col-md-12 text-left"><input checked="checked" name="g2" id="g23" type="radio" value="3">&nbsp;พอดี</div>
-		    				<div class="col-md-12 text-left"><input checked="checked" name="g2" id="g24" type="radio" value="4">&nbsp;เร็ว</div>
-		    				<div class="col-md-12 text-left"><input checked="checked" name="g2" id="g25" type="radio" value="5">&nbsp;เร็วมาก</div>
+							<div class="col-md-12 text-left"><input checked="checked" name="g2" id="g21" type="radio" value="21">&nbsp;ช้ามาก</div>
+		    				<div class="col-md-12 text-left"><input checked="checked" name="g2" id="g22" type="radio" value="22">&nbsp;ช้า</div>
+		    				<div class="col-md-12 text-left"><input checked="checked" name="g2" id="g23" type="radio" value="23">&nbsp;พอดี</div>
+		    				<div class="col-md-12 text-left"><input checked="checked" name="g2" id="g24" type="radio" value="24">&nbsp;เร็ว</div>
+		    				<div class="col-md-12 text-left"><input checked="checked" name="g2" id="g25" type="radio" value="25">&nbsp;เร็วมาก</div>
 		    				</h5>
 						</div>
 					</div>
@@ -87,11 +87,11 @@
 						<div class="col-md-4"></div>
 						<div class="col-md-8">
 							<h5>
-							<div class="col-md-12 text-left"><input checked="checked" name="g3" id="g31" type="radio" value="1">&nbsp;ช้าลงให้มาก</div>
-		    				<div class="col-md-12 text-left"><input checked="checked" name="g3" id="g32" type="radio" value="2">&nbsp;ช้าลง</div>
-		    				<div class="col-md-12 text-left"><input checked="checked" name="g3" id="g33" type="radio" value="3 text-left">&nbsp;ดีแล้ว</div>
-		    				<div class="col-md-12 text-left"><input checked="checked" name="g3" id="g34" type="radio" value="4">&nbsp;เร็วขึ้น</div>
-		    				<div class="col-md-12 text-left"><input checked="checked" name="g3" id="g35" type="radio" value="5">&nbsp;เร็วขึ้นให้มาก</div>
+							<div class="col-md-12 text-left"><input checked="checked" name="g3" id="g31" type="radio" value="31">&nbsp;ช้าลงให้มาก</div>
+		    				<div class="col-md-12 text-left"><input checked="checked" name="g3" id="g32" type="radio" value="32">&nbsp;ช้าลง</div>
+		    				<div class="col-md-12 text-left"><input checked="checked" name="g3" id="g33" type="radio" value="33 text-left">&nbsp;ดีแล้ว</div>
+		    				<div class="col-md-12 text-left"><input checked="checked" name="g3" id="g34" type="radio" value="34">&nbsp;เร็วขึ้น</div>
+		    				<div class="col-md-12 text-left"><input checked="checked" name="g3" id="g35" type="radio" value="35">&nbsp;เร็วขึ้นให้มาก</div>
 		    				</h5>
 						</div>
 					</div>					

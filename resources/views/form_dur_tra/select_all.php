@@ -30,6 +30,7 @@ echo "<hr>";
 */
 foreach ($eva_dur_tras as $eva_dur_tra) {
 	echo "ID: " . $eva_dur_tra->id;
+/*
     echo "<br>Course Code: " . $eva_dur_tra->course_code;
     echo ", Course Name: " . $eva_dur_tra->course_name;
     echo ", Time Period: " . $eva_dur_tra->time_period;
@@ -39,10 +40,10 @@ foreach ($eva_dur_tras as $eva_dur_tra) {
     echo ", Evaluation Date: " . $eva_dur_tra->evaluation_date;
     echo ", Duration Code: " . $eva_dur_tra->duration_code;
     echo ", Duration Name: " . $eva_dur_tra->duration_name;
-
-    echo "<br>Question Type Code: " . $eva_dur_tra->question_type_code;
+*/
+    echo ", Question Type Code: " . $eva_dur_tra->question_type_code;
     echo ", Question Type Name: " . $eva_dur_tra->question_type_name;
-    echo ", Question Code: " . $eva_dur_tra->question_code;
+    echo "<br>Question Code: " . $eva_dur_tra->question_code;
     echo ", Question Name: " . $eva_dur_tra->question_name;
 
     echo "<br>Answer Code: " . $eva_dur_tra->answer_code;

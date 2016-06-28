@@ -1,4 +1,4 @@
-<br>
+
 <?php
 if ($is_completed == '1') {
 	echo "is_completed = " . $is_completed . ", Insert Completed.";
